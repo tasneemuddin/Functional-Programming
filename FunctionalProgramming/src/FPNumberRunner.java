@@ -31,7 +31,7 @@ public class FPNumberRunner {
 		sum = numbers.stream()
 				.reduce(
 				0, //Initial value of sum
-				(number1, number2) -> number1 + number2);
+				(number1, number2) -> number1 + number2);//Lambda Expression
 		System.out.println("Sum : "+sum);
 		System.out.println("----------------------------Line Breaker----------------------------");
 		
@@ -42,7 +42,9 @@ public class FPNumberRunner {
 				.filter(number -> number%2 == 1)
 				.reduce(
 				0, //Initial value of sum
-				(number1, number2) -> number1 + number2);
+				(number1, number2) -> { //Lambda Expression
+					return number1 + number2;
+				});
 		System.out.println("ODD Sum : "+sum);
 	}
 }
